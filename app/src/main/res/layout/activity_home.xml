@@ -6,21 +6,110 @@
     android:layout_height="match_parent"
     tools:context=".Home">
 
+    <!-- Header com Bem-vindo -->
     <TextView
-        android:id="@+id/tvESG"
-
+        android:id="@+id/tvWelcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Bem vindo a Plataforma ESG"
+        android:text="Bem-vindo, Usuário!"
         android:textSize="20sp"
-        android:textColor="@color/black"
         android:textStyle="bold"
-        android:gravity="center"
-
+        android:textColor="@color/black"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        />
+        android:padding="16dp"
+        android:gravity="center"/>
+
+    <!-- Seção de Atividades -->
+    <TextView
+        android:id="@+id/tvActivitiesTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Atividades de Sustentabilidade e Saúde"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/red"
+        app:layout_constraintTop_toBottomOf="@id/tvWelcome"
+        android:padding="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Exemplo de Atividade -->
+    <LinearLayout
+        android:id="@+id/activityContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@color/red"
+        app:layout_constraintTop_toBottomOf="@id/tvActivitiesTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/tvActivityTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Desafio de Economia de Energia"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/tvActivityDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reduza seu consumo de energia em 10%"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+    <!-- Seção de Recompensas -->
+    <TextView
+        android:id="@+id/tvRewardsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Recompensas Disponíveis"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/activityContainer"
+        android:padding="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Exemplo de Recompensa -->
+    <LinearLayout
+        android:id="@+id/rewardContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintTop_toBottomOf="@id/tvRewardsTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/tvRewardTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cupom de Desconto"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/tvRewardDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="R$ 50,00 em compras online"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/black"/>
+
+    </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
